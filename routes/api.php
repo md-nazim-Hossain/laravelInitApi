@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ScheduleController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
@@ -24,3 +25,6 @@ Route::post('/signup', [UserController::class, 'signup']);
 Route::post('/login', [UserController::class, 'login']);
 Route::get('/posts/{id?}', [PostController::class, 'show']);
 Route::post('/create-post', [PostController::class, 'create']);
+
+//=============== schedule ===============
+Route::post('/schedule-store', [ScheduleController::class, 'store_schedule']);
